@@ -1,0 +1,23 @@
+This code is modified from the original PEGASUS implementation (http://www.cs.cmu.edu/~pegasus/). 
+This code only implements the connected components algorithm from PEGASUS. 
+While implementing the original algorithm, this implementation has the following changes:
+
+1. 	The original implementation is for integral Vertex IDs. 
+	This implementation is for a more generic string Vertex IDs.
+2. 	This implemenation drops the summary stage at the end of the algorithm.
+3. 	This implementation handles the directory cleanups more cleanly.
+4. 	This implementation drops the requirement of giving the algorithm with the total number of nodes. 
+	The original implementation builds a self connection for all the nodes from node-id 0 to n-1. 
+	Instead, this implementation expects a self connection to be provided as input.
+
+This is list of parameters that the implementation takes:
+num_reducers=? 
+edge_path=<path>
+all_vertices=<path>
+iteration_state=<path> 
+stage1out=<path>
+stage2out=<path> 
+stage3out=<path> 
+local_output=<path> 
+grapherout=<path>
+
